@@ -1,0 +1,59 @@
+@import "../../../globalStyles/variables";
+
+.button {
+  outline: none;
+  padding: 0.75rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $black;
+  }
+
+  &.info {
+    background-color: $blue;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $blueDarker;
+    }
+  }
+
+  &.danger {
+    background-color: $danger;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $dangerDarker;
+    }
+  }
+
+  &.warning {
+    background-color: $warning;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $warningDarker;
+    }
+  }
+
+  &.success {
+    background-color: $success;
+
+    &:hover,
+    &:focus {
+      background-color: $successDarker;
+    }
+  }
+}

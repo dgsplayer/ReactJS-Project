@@ -1,0 +1,35 @@
+@import "../../../globalStyles/variables";
+@import "../../../globalStyles/mixins";
+
+.modal {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: clamp(20%, 500px, 100%);
+  max-height: 80%;
+  margin: auto;
+  background-color: $white;
+  border-radius: 5px;
+  overflow-y: auto;
+
+  @include scrollbar;
+
+  &.padding {
+    padding: 1.5rem;
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+
+    svg {
+      transition: fill 0.3s ease-in-out;
+    }
+
+    &:hover svg {
+      fill: $danger;
+    }
+  }
+}

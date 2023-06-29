@@ -1,0 +1,42 @@
+@import "../../globalStyles/mixins";
+@import "../../globalStyles/variables";
+
+.listFinishedContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  .listFinished {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(20%, 500px, 90%);
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    background-color: $white;
+    border-radius: 5px;
+    border: 1px solid $blue;
+    box-shadow: 0px 12px 8px 8px rgba(0, 0, 0, 0.1);
+    z-index: 500;
+
+    p {
+      color: $lightBlack;
+      margin-bottom: 1rem;
+      text-align: center;
+      max-width: 40ch;
+    }
+
+    a {
+      color: $blue;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

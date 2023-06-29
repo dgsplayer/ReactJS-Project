@@ -1,0 +1,39 @@
+@import "../../../globalStyles/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 2rem);
+
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .label {
+      text-align: left;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    .observation {
+      margin-top: 0.25rem;
+      max-width: 50ch;
+      text-align: left;
+      font-size: 0.75rem;
+      color: $lightBlack;
+    }
+  }
+
+  .inputWrapper + .inputWrapper {
+    margin-top: 1rem;
+  }
+
+  .buttonsWrapper {
+    margin-top: 1rem;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

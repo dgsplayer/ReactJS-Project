@@ -1,0 +1,58 @@
+@import "../../globalStyles/variables";
+@import "../../globalStyles/mixins";
+
+.appHelpContainer {
+  .markersGrid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+
+    @include responsive(sm) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .marker {
+      p {
+        color: $lightBlack;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .routes {
+    margin-top: 1rem;
+
+    .route {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        color: $lightBlack;
+        font-size: 0.875rem;
+      }
+
+      .blue,
+      .red {
+        display: flex;
+        width: 100px;
+        height: 5px;
+        border-radius: 5px;
+        margin-bottom: 0.5rem;
+      }
+
+      .blue {
+        background-color: $blueRoute;
+      }
+
+      .red {
+        background-color: $danger;
+      }
+    }
+
+    .route + .route {
+      margin-top: 1rem;
+    }
+  }
+}
